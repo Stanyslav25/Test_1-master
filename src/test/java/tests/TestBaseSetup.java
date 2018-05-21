@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 public class TestBaseSetup {
 
     public WebDriver driver;
-    //String appURL = "http://mail.google.com/";
 
     public WebDriver getDriver() {
         return driver;
@@ -21,7 +20,7 @@ public class TestBaseSetup {
 
     public static WebDriver initFirefoxDriver(){
 
-        System.out.println("Launching Firefox browser");
+        System.out.println("Launching Firefox browser ....");
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

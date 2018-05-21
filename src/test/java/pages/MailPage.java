@@ -97,7 +97,7 @@ public class MailPage extends PageMethods {
             waitForDisplay(selectAllCheckbox);
             if (deleteDynamicElement.isDisplayed()) {
                 deleteButton.click();
-                System.out.println("Page deleted");
+                System.out.println("Page deleted....");
                 } else {
                 selectAllCheckbox.click();
                 deleteButton.click();
@@ -106,7 +106,7 @@ public class MailPage extends PageMethods {
                 }
             System.out.println("Test done. " + expectedMassage.getText());
                  }
-            }else{System.out.println("There is no any massage. ");
+            }else{System.out.println("There is no any massage. Test done. Yofi");
         }
     }
     catch(Exception e){

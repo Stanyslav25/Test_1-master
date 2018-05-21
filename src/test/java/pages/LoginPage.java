@@ -27,21 +27,27 @@ public class LoginPage extends PageMethods {
 
     public LoginPage typeLogin(){
         if(loginField.isDisplayed())
+
         clearAndSendKey(loginField, "");
+        System.out.println("Login....");
         buttonNext.click();
         return new LoginPage(driver);
     }
 
-    public MailPage typePassword(){
+    public void typePassword(){
         waitForClickable(passwordField);
+        System.out.println("Password....");
         clearAndSendKey(passwordField, "");
         passwordButtonNext.click();
-        return new MailPage(driver);
+
     }
 
-    public void inputIntoMail(){
+    public MailPage inputIntoMail(){
         typeLogin();
         typePassword();
+        System.out.println("Going to mail page....");
+        return new MailPage(driver);
+
     }
 
 }
